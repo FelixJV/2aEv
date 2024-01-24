@@ -15,7 +15,7 @@ public class MedicoAsistenciaDomiciliaria extends Medico{
     }
     @Override
     public String mostrarDatos() {
-        return "MedicoAsistenciaDomiciliaria{" +
+        return "MedicoAsistenciaDomiciliariaa{" +
                 "kmVisitas=" + Arrays.toString(kmVisitas) +
                 ", tarifaKm=" + tarifaKm +
                 ", nombre='" + nombre + '\'' +
