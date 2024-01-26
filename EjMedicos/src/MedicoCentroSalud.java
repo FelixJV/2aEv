@@ -5,6 +5,15 @@ public class MedicoCentroSalud extends Medico {
         super();
         this.CentroSal = cS;
     }
+    public MedicoCentroSalud(String nombre, int edad, boolean sexo, int horas, int salarioHoras, CentroSalud cs) {
+        super(nombre,edad,sexo,horas,salarioHoras);
+        this.CentroSal = cs;
+    }
+
+    public MedicoCentroSalud(){
+        super();
+        this.CentroSal = new CentroSalud();
+    }
      public int calcularSalario(Medico medico, int horas, int sueldoHoras){
          int sueldoFinal = medico.horas* medico.SalarioHoras;
         return sueldoFinal;
@@ -12,7 +21,7 @@ public class MedicoCentroSalud extends Medico {
 
     @Override
     public String toString() {
-        return "MedicoCentroSalud{" +
+        return super.toString()+
                 "CentroSal=" + CentroSal +
                 '}';
     }

@@ -10,4 +10,7 @@ public class CentroSalud {
         this.domicilio = domicilio;
         postcode = codigopostal;
     }
+    public CentroSalud(){
+
+    }
 }

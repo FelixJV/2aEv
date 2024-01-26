@@ -4,7 +4,18 @@ public abstract class Medico {
     protected boolean sexo;
     protected int horas;
     protected int SalarioHoras;
-    protected int salarioFin;
+
+    public Medico(String nombre, int edad, boolean sexo, int horas, int salarioHoras) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.sexo = sexo;
+        this.horas = horas;
+        SalarioHoras = salarioHoras;
+    }
+
+    public Medico() {
+
+    }
 
     public String mostrarDatos(){
         return "Medico{" +
@@ -15,16 +26,16 @@ public abstract class Medico {
                 ", SalarioHoras=" + SalarioHoras +
                 '}';
     }
-    public void calcularSalario(int horas, int SalarioHoras){
-        salarioFin = horas * SalarioHoras;
+    public double calcularSalario(){
+        return horas * SalarioHoras;
     }
 
     @Override
     public String toString() {
-        return "Medico{" +
+        return this.getClass().getSimpleName() +
                 "nombre='" + nombre + '\'' +
                 ", edad=" + edad +
-                ", sexo=" + sexo +
+                ", sexo=" + dameSexo() +
                 ", horas=" + horas +
                 ", SalarioHoras=" + SalarioHoras +
                 '}';
@@ -68,5 +79,9 @@ public abstract class Medico {
 
     public void setSalarioHoras(int salarioHoras) {
         SalarioHoras = salarioHoras;
+    }
+
+    public String dameSexo(){
+        return (sexo)?"femenino":"masculino";
     }
 }
