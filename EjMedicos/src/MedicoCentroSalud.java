@@ -14,9 +14,9 @@ public class MedicoCentroSalud extends Medico {
         super();
         this.CentroSal = new CentroSalud();
     }
-     public int calcularSalario(Medico medico, int horas, int sueldoHoras){
-         int sueldoFinal = medico.horas* medico.SalarioHoras;
-        return sueldoFinal;
+     public int calcularSalario(int horas, int sueldoHoras){
+         return horas* SalarioHoras;
+
      }
 
     @Override
