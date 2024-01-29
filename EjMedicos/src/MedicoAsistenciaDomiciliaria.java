@@ -3,11 +3,11 @@ import java.util.Arrays;
 public class MedicoAsistenciaDomiciliaria extends Medico{
 
     private int [] kmVisitas ;
-    private double tarifaKm;
+    private int tarifaKm;
 
-    public MedicoAsistenciaDomiciliaria(String nombre, int edad, boolean sexo, int horas, int salarioHoras, int[] kmVisitas) {
+    public MedicoAsistenciaDomiciliaria(String nombre, int edad, boolean sexo, int horas, int salarioHoras, int[] kmvisitas) {
         super(nombre,edad,sexo,horas,salarioHoras);
-        this.kmVisitas = kmVisitas;
+        this.kmVisitas = kmvisitas;
         tarifaKm = 4;
     }
 
@@ -17,7 +17,7 @@ public class MedicoAsistenciaDomiciliaria extends Medico{
         tarifaKm = 4;
     }
 
-    public double calcularSalario(){
+    public int calcularSalario(){
         int kmvisitados=0;
         for (int i = 0; i < kmVisitas.length; i++) {
             kmvisitados += kmVisitas[i];

@@ -30,7 +30,7 @@ public abstract class Medico {
                 ", SalarioHoras=" + SalarioHoras +
                 '}';
     }
-    public double calcularSalario(){
+    public int calcularSalario(){
         return horas * SalarioHoras;
     }
 
