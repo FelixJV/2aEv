@@ -1,4 +1,7 @@
 public class GestorMedicos {
-    //array de medicos
+    private Medico []medicos;
 
+    public void listamedicos(){
+return;
+    }
 }

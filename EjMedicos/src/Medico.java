@@ -14,7 +14,11 @@ public abstract class Medico {
     }
 
     public Medico() {
-
+        nombre = Utilidades.dameNombre();
+        edad = (int) Math.random()*50+18;
+        sexo = false;
+        horas = (int) Math.random()*120+100;
+        SalarioHoras = 10;
     }
 
     public String mostrarDatos(){

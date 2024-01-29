@@ -15,6 +15,15 @@ public class CentroSalud {
         nombre = Utilidades.dameNombre();
         domicilio = Utilidades.dameDomi();
         postcode = (int) (Math.random()*3000+2000);
+    }
 
+    @Override
+    public String toString() {
+        return "CentroSalud{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", domicilio='" + domicilio + '\'' +
+                ", postcode=" + postcode +
+                '}';
     }
 }
