@@ -17,10 +17,14 @@ public class GestorMedicos {
     public String toString(){
         return Arrays.toString(medicos);
     }
-    public void mostrar (){
+    public void mostrarMedicos (int edad){
         for (int i = 0; i < medicos.length; i++) {
-            if (medicos[i]!= null)
+
+            if (medicos[i]!= null && medicos[i].getEdad()=>edad)
+                System.out.println("No hay medicos");
+            else{
                 System.out.println(medicos[i]);
+            }
         }
 
     }

@@ -1,7 +1,7 @@
 public class CuentaCorriente {
-    private Titular titular;
-    private String numeroCuenta;
-    private Double saldo;
+    protected Titular titular;
+    protected String numeroCuenta;
+    protected Double saldo;
 
     public CuentaCorriente(Titular titular, String cuenta, Double saldo){
         this.titular = titular;
@@ -13,6 +13,8 @@ public class CuentaCorriente {
         numeroCuenta = cuenta;
         saldo = 15.3;
     }
+
+    public CuentaCorriente(){}
 
     public void incrementarSaldo(Double incremento){
         saldo = saldo+incremento;
