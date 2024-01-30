@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class GestorMedicos {
     private Medico []medicos;
 
@@ -11,4 +13,27 @@ public class GestorMedicos {
             }
         }
     }
+    //mostrar
+    public String toString(){
+        return Arrays.toString(medicos);
+    }
+    public void mostrar (){
+        for (int i = 0; i < medicos.length; i++) {
+            if (medicos[i]!= null)
+                System.out.println(medicos[i]);
+        }
+
+    }
+
+    public boolean altaMedico(Medico medico){
+
+        return false;
+    }
+    //baja
+    //modificar algo común
+    //modificar algo particular
+    public boolean existe(String nif){ //evitar duplicados
+        return false;
+    }
+
 }

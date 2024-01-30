@@ -13,7 +13,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
         int opcion = 0;
-        do {
+        /*do {
             System.out.println("1.-Mostrar datos de un Medico de centro de salud \n 2.- Crear Medico de Asistencia Domiciliaria \n 3.- Crear listado de medicos");
          //   opcion = br.read();
             opcion = scanner.nextInt();
@@ -29,5 +29,11 @@ public class Main {
                     System.out.println("default");
             }
         } while (exit == false);
+        */
+        //menú Gestor
+        GestorMedicos gestorMedicos= new GestorMedicos();
+        System.out.println(gestorMedicos);
+        gestorMedicos.mostrar();
+        //Menú con 5 opciones los métodos del gestorMedicos alta, baja, modi
     }
 }

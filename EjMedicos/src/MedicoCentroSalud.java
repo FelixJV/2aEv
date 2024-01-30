@@ -14,10 +14,7 @@ public class MedicoCentroSalud extends Medico {
         super();
         this.CentroSal = new CentroSalud();
     }
-     public int calcularSalario(){
-         return super.calcularSalario();
 
-     }
 
     @Override
     public String toString() {
