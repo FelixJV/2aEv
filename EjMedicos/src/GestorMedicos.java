@@ -20,7 +20,7 @@ public class GestorMedicos {
     public void mostrarMedicos (int edad){
         for (int i = 0; i < medicos.length; i++) {
 
-            if (medicos[i]!= null && medicos[i].getEdad()=>edad)
+            if (medicos[i]!= null && medicos[i].getEdad()>=edad)
                 System.out.println("No hay medicos");
             else{
                 System.out.println(medicos[i]);
