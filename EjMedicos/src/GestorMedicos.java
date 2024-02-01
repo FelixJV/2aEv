@@ -28,6 +28,7 @@ public class GestorMedicos {
         }
 
     }
+    public void darAlta
 
     public boolean altaMedico(Medico medico){
 
