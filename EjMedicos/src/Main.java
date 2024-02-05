@@ -32,6 +32,7 @@ public class Main {
         */
         //menú Gestor
         GestorMedicos gestorMedicos= new GestorMedicos();
+
         System.out.println(gestorMedicos);
         //Menú con 5 opciones los métodos del gestorMedicos alta, baja, modi
     }
