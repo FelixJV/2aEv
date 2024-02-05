@@ -30,9 +30,15 @@ public class GestorMedicos {
     }
 
 
-    public boolean altaMedico(Medico medico){
+    public void altaMedico(Medico medico){
+        for (int i = 0; i < medicos.length; i++) {
+            if (medicos[i] == null){
 
-        return false;
+            }else{
+
+            }
+
+        }
     }
     //baja
     //modificar algo común
