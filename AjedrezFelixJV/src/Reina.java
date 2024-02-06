@@ -1,7 +1,7 @@
 public class Reina extends Pieza{
     public Reina(boolean color) {
+        super(color);
     }
-
 
     @Override
     public boolean validoMovimiento(Movimiento mov) {

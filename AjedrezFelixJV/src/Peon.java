@@ -1,7 +1,7 @@
 public class Peon extends Pieza {
     public Peon(boolean color) {
+        super(color);
     }
-
 
     @Override
     public boolean validoMovimiento(Movimiento mov) {

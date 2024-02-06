@@ -4,6 +4,10 @@ public abstract class Pieza {
 
     public Pieza(){}
 
+    public Pieza(boolean color) {
+        this.color = color;
+    }
+
     public abstract boolean validoMovimiento(Movimiento mov);
 
      public abstract String pintarPieza();
