@@ -12,6 +12,8 @@ public class Main {
        String movimiento = lectura.next();
        Movimiento mov = juego.jugada(movimiento,tablero);
         System.out.println(mov);
+        tablero.moverPieza(mov);
+        tablero.pintarTablero();
 
     }
 
