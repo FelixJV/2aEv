@@ -68,8 +68,8 @@ public class Tablero {
         ponPieza(devolverPieza(mov.getPosInicial()), mov.getPosFinal().getFila(), mov.getPosFinal().getColumna());
         quitaPieza(mov.getPosInicial());
 
-        ponPieza(devolverPieza(mov.getPosInicial()),mov.getPosFinal());
-        quitaPieza(mov.getPosInicial());
+       /* ponPieza(devolverPieza(mov.getPosInicial()),mov.getPosFinal());
+        quitaPieza(mov.getPosInicial());*/
     }
 
     /**
