@@ -5,7 +5,29 @@ public class Peon extends Pieza {
 
     @Override
     public boolean validoMovimiento(Movimiento mov) {
-        return false;
+        boolean valido = false;
+        if (!isColor()){
+           if (mov.getPosInicial().getFila()==6){
+               if(mov.saltoVertical()==-1||mov.saltoVertical()==-2){
+                   valido=true;
+               }
+           }else{
+               if(mov.getPosFinal()==null){
+                   if
+               }
+
+           }
+        }else{
+            if(mov.getPosInicial().getFila()==1){
+                if(mov.saltoVertical()==1||mov.saltoVertical()==2){
+                    valido=true;
+                }
+
+            }else{
+
+            }
+    }
+        return valido;
     }
 
     public String pintarPieza() {

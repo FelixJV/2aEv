@@ -74,6 +74,9 @@ public class Tablero {
         //ponPieza(tablero[filaInicial][columnaInicial],mov.getPosFinal());
         quitaPieza(mov.getPosInicial());
     }
+    public boolean hayPiezasEntre(Movimiento mov){
+        return tablero[mov.getPosInicial().getFila()+1][mov.getPosInicial().getColumna()+1]!=null;
+    }
 
     /**
      * Metodo que nos dejará ver la pieza que hay en determinada posicion del tablero
