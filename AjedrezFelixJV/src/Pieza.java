@@ -35,4 +35,10 @@ public abstract class Pieza {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
+    public String mensajePersonalizado(){
+        return this.getClass().getSimpleName()+ getMensajePersonalizado();
+    }
+
+    public abstract String getMensajePersonalizado() ;
 }

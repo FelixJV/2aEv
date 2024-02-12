@@ -5,7 +5,7 @@ public class Reina extends Pieza{
 
     @Override
     public boolean validoMovimiento(Movimiento mov) {
-        return false;
+        return mov.esDiagonal()|| mov.esVertical() || mov.esHorizontal();
     }
 
     @Override
@@ -15,5 +15,8 @@ public class Reina extends Pieza{
         }else{
             return this.getClass().getSimpleName().charAt(0) + "B";
         }
+    }
+    public String getMensajePersonalizado() {
+        return "Sólo en horizontal y vertical";
     }
 }

@@ -33,10 +33,10 @@ public class Tablero {
         tablero[7][7] = new Torre(true);
 
 
-            for (int j = 0; j < 8; j++) {
-                tablero[6][j] = new Peon(true);
+        for (int j = 0; j < 8; j++) {
+            tablero[6][j] = new Peon(true);
 
-            }
+        }
 
     }
 
@@ -46,47 +46,96 @@ public class Tablero {
      */
     public void pintarTablero() {
         for (int i = 0; i < tablero.length; i++) {
-            for (int j = 0; j < tablero.length - 1; j++) {
+            for (int j = 0; j < tablero.length; j++) {
                 if (tablero[i][j] != null) {
                     System.out.print("[ " + tablero[i][j].pintarPieza() + " ]");
                 } else {
-                    System.out.print("[   ]");
+                    System.out.print("[    ]");
                 }
             }
             System.out.println("\n");
         }
     }
 
- public void moverPieza (Movimiento mov){
-        tablero[]
- }
+    /**
+     * metodo que sustituirá la posición de una pieza a una nueva proporcionada por el usuario.
+     * @param mov dato proporcionado por el usuario con posicion inicial, final y columna inicial y final.
+     */
+    public void moverPieza(Movimiento mov) {
+        //int filaInicial = mov.getPosInicial().getFila();
+        //int columnaInicial = mov.getPosInicial().getColumna();
+        /*tablero[mov.getPosFinal().getFila()][mov.getPosFinal().getColumna()] = tablero[mov.getPosInicial().getFila()][mov.getPosInicial().getColumna()];
+        tablero[mov.getPosInicial().getFila()][mov.getPosInicial().getColumna()] = null;*/
 
+        /*ponPieza(devolverPieza(mov.getPosInicial()), mov.getPosFinal().getFila(), mov.getPosFinal().getColumna());
+        quitaPieza(mov.getPosInicial());*/
+
+        ponPieza(devolverPieza(mov.getPosInicial()),mov.getPosFinal());
+        //ponPieza(tablero[filaInicial][columnaInicial],mov.getPosFinal());
+        quitaPieza(mov.getPosInicial());
+    }
+
+    /**
+     * Metodo que nos dejará ver la pieza que hay en determinada posicion del tablero
+     * @param fila
+     * @param columna
+     * @return
+     */
+    public Pieza devolverPieza(int fila, int columna) {
+        return tablero[fila][columna];
+    }
+
+    public Pieza devolverPieza(Posicion pos) {
+        return devolverPieza(pos.getFila(), pos.getColumna());
+    }
+
+    /**
+     * Metodo booleano que nos devolverá un true en caso de que exista una pieza en la posicion elegida del tablero
+     * @param fila
+     * @param columna
+     * @return
+     */
     public boolean hayPieza(int fila, int columna) {
-        boolean hay = false;
-        return hay;
+        return tablero[fila][columna]!=null;
     }
 
     public boolean hayPieza(Posicion pos) {
-        boolean hay = false;
-        return hay;
+         return true;
     }
 
+
+    /**
+     * Metodo que a traves de el podemos poner una pieza cualquiera en la posición elegida.
+     * @param pieza
+     * @param fila
+     * @param columna
+     */
+    public void ponPieza(Pieza pieza, int fila, int columna) {
+        tablero[fila][columna]=pieza;
+    }
+
+    public void ponPieza(Pieza pieza, Posicion pos) {
+        ponPieza(pieza, pos.getFila(), pos.getColumna());
+    }
+
+    /**
+     * Método para remplazar una pieza en el tablero por un valor nulo.
+     * @param fila
+     * @param columna
+     */
+    public void quitaPieza(int fila, int columna) {
+        tablero[fila][columna] = null;
+    }
+
+    public void quitaPieza(Posicion pos) {
+        tablero[pos.getFila()][pos.getColumna()]= null;
+    }
     public boolean hayPiezaEntre(Movimiento mov) {
         boolean hay = false;
         return hay;
     }
 
-    public void ponPieza(Pieza pieza, int fila, int columna) {
+    public Pieza[][] getTablero() {
+        return tablero;
     }
-
-    public void ponPieza(Pieza pieza, Movimiento mov) {
-    }
-
-    public void quitaPieza(int fila, int columna) {
-    }
-
-    public void quitaPieza(Posicion pos) {
-    }
-
-
 }

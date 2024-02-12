@@ -5,7 +5,7 @@ public class Caballo extends Pieza{
 
     @Override
     public boolean validoMovimiento(Movimiento mov) {
-        return false;
+        return Math.abs(mov.saltoHorizontal())==3&&Math.abs(mov.saltoVertical())==2||Math.abs(mov.saltoVertical())==3&&Math.abs(mov.saltoHorizontal())==2;
     }
 
     @Override
@@ -15,5 +15,8 @@ public class Caballo extends Pieza{
         }else{
             return this.getClass().getSimpleName().charAt(0) + "B";
         }
+    }
+    public String getMensajePersonalizado() {
+        return "Sólo en horizontal y vertical";
     }
 }

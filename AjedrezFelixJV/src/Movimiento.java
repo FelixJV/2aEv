@@ -10,9 +10,10 @@ public class Movimiento {
      * @param posFinal Determina los dos valores de la posicion Final
      * @param posInicial Determina los dos valores de la posicion Inicial
      */
-    public Movimiento(Posicion posFinal, Posicion posInicial){
-        this.posFinal= posFinal;
+    public Movimiento(Posicion posInicial,Posicion posFinal){
         this.posInicial = posInicial;
+        this.posFinal= posFinal;
+
     }
 
     /**
@@ -26,7 +27,13 @@ public class Movimiento {
         }
         return respuesta;
     }
-
+    public boolean esDiagonal(){
+        boolean respuesta = false;
+        if(Math.abs(saltoHorizontal())==Math.abs(saltoVertical())){
+            respuesta = true;
+        }
+        return respuesta;
+    }
     /**
      * Metodo que determina si el movimiento es vertical
      * @return Te devuelve un true si la columna de la posición final es igual a la de la inicial
@@ -55,11 +62,34 @@ public class Movimiento {
         return posFinal.getFila()- posInicial.getFila();
     }
 
+    public int saltoDiagonal(){
+        int salto = 0;
+        if (saltoVertical()==saltoHorizontal()){
+        salto = saltoVertical();}
+        return salto;}
+
+    public Posicion getPosFinal() {
+        return posFinal;
+    }
+
+    public void setPosFinal(Posicion posFinal) {
+        this.posFinal = posFinal;
+    }
+
+    public Posicion getPosInicial() {
+        return posInicial;
+    }
+
+    public void setPosInicial(Posicion posInicial) {
+        this.posInicial = posInicial;
+    }
+
     @Override
     public String toString() {
         return "Movimiento{" +
-                "posFinal=" + posFinal +
                 ", posInicial=" + posInicial +
+                "posFinal=" + posFinal +
+
                 '}';
     }
 }
