@@ -27,7 +27,13 @@ public class Movimiento {
         }
         return respuesta;
     }
-
+    public boolean esDiagonal(){
+        boolean respuesta = false;
+        if(Math.abs(saltoHorizontal())==Math.abs(saltoVertical())){
+            respuesta = true;
+        }
+        return respuesta;
+    }
     /**
      * Metodo que determina si el movimiento es vertical
      * @return Te devuelve un true si la columna de la posición final es igual a la de la inicial
@@ -55,6 +61,12 @@ public class Movimiento {
     public int saltoVertical(){
         return posFinal.getFila()- posInicial.getFila();
     }
+
+    public int saltoDiagonal(){
+        int salto = 0;
+        if (saltoVertical()==saltoHorizontal()){
+        salto = saltoVertical();}
+        return salto;}
 
     public Posicion getPosFinal() {
         return posFinal;

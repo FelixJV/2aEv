@@ -40,7 +40,7 @@ public class Juego {
         }
         else{//ole ole ya tengo movimiento
             mov = new Movimiento(new Posicion(filinicial,colinicial),new Posicion(filfinal,colfinal));
-            turno = !turno;
+           // turno = !turno; tiene que hacerse cuando la pieza diga que sí puede hacer el movimiento y se halla movido
         }
         return mov;
     }

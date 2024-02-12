@@ -29,4 +29,9 @@ public class Torre extends Pieza {
             return this.getClass().getSimpleName().charAt(0) + "B";
         }
     }
+
+    @Override
+    public String getMensajePersonalizado() {
+        return "Sólo en horizontal y vertical";
+    }
 }

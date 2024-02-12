@@ -62,14 +62,17 @@ public class Tablero {
      * @param mov dato proporcionado por el usuario con posicion inicial, final y columna inicial y final.
      */
     public void moverPieza(Movimiento mov) {
+        //int filaInicial = mov.getPosInicial().getFila();
+        //int columnaInicial = mov.getPosInicial().getColumna();
         /*tablero[mov.getPosFinal().getFila()][mov.getPosFinal().getColumna()] = tablero[mov.getPosInicial().getFila()][mov.getPosInicial().getColumna()];
         tablero[mov.getPosInicial().getFila()][mov.getPosInicial().getColumna()] = null;*/
 
-        ponPieza(devolverPieza(mov.getPosInicial()), mov.getPosFinal().getFila(), mov.getPosFinal().getColumna());
-        quitaPieza(mov.getPosInicial());
-
-       /* ponPieza(devolverPieza(mov.getPosInicial()),mov.getPosFinal());
+        /*ponPieza(devolverPieza(mov.getPosInicial()), mov.getPosFinal().getFila(), mov.getPosFinal().getColumna());
         quitaPieza(mov.getPosInicial());*/
+
+        ponPieza(devolverPieza(mov.getPosInicial()),mov.getPosFinal());
+        //ponPieza(tablero[filaInicial][columnaInicial],mov.getPosFinal());
+        quitaPieza(mov.getPosInicial());
     }
 
     /**
@@ -112,8 +115,7 @@ public class Tablero {
     }
 
     public void ponPieza(Pieza pieza, Posicion pos) {
-        tablero[pos.getFila()][pos.getColumna()]=pieza;
-
+        ponPieza(pieza, pos.getFila(), pos.getColumna());
     }
 
     /**

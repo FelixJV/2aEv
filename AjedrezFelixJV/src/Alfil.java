@@ -6,7 +6,7 @@ public class Alfil extends Pieza{
     @Override
     public boolean validoMovimiento(Movimiento mov) {
 
-        return false;
+        return mov.esDiagonal();
     }
 
     @Override
@@ -16,5 +16,8 @@ public class Alfil extends Pieza{
         }else{
             return this.getClass().getSimpleName().charAt(0) + "B";
         }
+    }
+    public String getMensajePersonalizado() {
+        return "Sólo en horizontal y vertical";
     }
 }
