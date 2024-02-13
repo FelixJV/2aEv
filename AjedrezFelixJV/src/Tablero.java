@@ -75,7 +75,20 @@ public class Tablero {
         quitaPieza(mov.getPosInicial());
     }
     public boolean hayPiezasEntre(Movimiento mov){
-        return tablero[mov.getPosInicial().getFila()+1][mov.getPosInicial().getColumna()+1]!=null;
+        //return tablero[mov.getPosInicial().getFila()+1][mov.getPosInicial().getColumna()+1]!=null;
+        if (mov.esVertical()){
+            if (mov.getPosInicial().getFila()<mov.getPosFinal().getFila())
+                for (int i = mov.getPosInicial().getFila()+1; i < mov.getPosFinal().getFila(); i++) {
+                    
+                }
+            else
+                for (int i = 0; i < ; i++) {
+                    
+                }{
+                
+            }
+
+        }
     }
 
     /**
