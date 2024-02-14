@@ -4,39 +4,47 @@ public class Peon extends Pieza {
     }
 
     @Override
-    public boolean validoMovimiento(Movimiento mov) {
+    public boolean validoMovimiento(Movimiento mov, Tablero tablero) {
         boolean valido = false;
-        if (!isColor()){
-           if (mov.getPosInicial().getFila()==6){
-               if(mov.saltoVertical()==-1||mov.saltoVertical()==-2){
-                   valido=true;
-               }
-           }else{
-               if(mov.getPosFinal()==null){
-                   if
-               }
-
-           }
-        }else{
-            if(mov.getPosInicial().getFila()==1){
-                if(mov.saltoVertical()==1||mov.saltoVertical()==2){
-                    valido=true;
+        if (isColor()) {//blanco
+            if (mov.getPosInicial().getFila() == 6) {
+                if (mov.esVertical() && (mov.saltoVertical() == -1 || mov.saltoVertical() == -2) && !tablero.hayPieza(mov.getPosFinal())
+                        || (mov.esDiagonal() && mov.saltoVertical() == -1 && tablero.hayPieza(mov.getPosFinal()))) {
+                    valido = true;
                 }
+            } else {//fila distinta de la inicial
+                if (mov.esVertical() && mov.saltoVertical() == -1 && !tablero.hayPieza(mov.getPosFinal())
+                        || (mov.esDiagonal() && mov.saltoVertical() == -1 && tablero.hayPieza(mov.getPosFinal()))) {
+                    valido = true;
+                }
+            }
+    }else
 
-            }else{
+    {//negro
+        if (mov.getPosInicial().getFila() == 1) {
+            if (mov.esVertical()&&mov.saltoVertical() == 1 || mov.saltoVertical() ==2 && !tablero.hayPieza(mov.getPosFinal())
+                    || (mov.esDiagonal() && mov.saltoVertical() == 1 && tablero.hayPieza(mov.getPosFinal()))) {
+                valido = true;}
+
+        } else {
+            if (mov.esVertical() && mov.saltoVertical() == 1 && !tablero.hayPieza(mov.getPosFinal())
+                    || (mov.esDiagonal() && mov.saltoVertical() == -1 && tablero.hayPieza(mov.getPosFinal()))) {
+                    valido = true;
 
             }
+        }
     }
         return valido;
-    }
+}
 
     public String pintarPieza() {
-        if (super.isColor()==false) {
+        if (super.isColor() == false) {
             return this.getClass().getSimpleName().charAt(0) + "N";
-        }else{
+        } else {
             return this.getClass().getSimpleName().charAt(0) + "B";
         }
     }
+
     public String getMensajePersonalizado() {
         return "Sólo en horizontal y vertical";
     }

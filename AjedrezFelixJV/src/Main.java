@@ -14,9 +14,9 @@ public class Main {
                 System.out.print("movimiento nuevo: ");
                 String movimiento = lectura.next();
                 mov = juego.jugada(movimiento, tablero);
-                System.out.println(mov);
+
             } while (mov == null);
-            if (tablero.devolverPieza(mov.getPosInicial()).validoMovimiento(mov)) {
+            if (tablero.devolverPieza(mov.getPosInicial()).validoMovimiento(mov,tablero)) {
                 tablero.moverPieza(mov);
                 juego.setTurno(!juego.getTurno());
             }else

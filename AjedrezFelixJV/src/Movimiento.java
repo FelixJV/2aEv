@@ -62,11 +62,7 @@ public class Movimiento {
         return posFinal.getFila()- posInicial.getFila();
     }
 
-    public int saltoDiagonal(){
-        int salto = 0;
-        if (saltoVertical()==saltoHorizontal()){
-        salto = saltoVertical();}
-        return salto;}
+
 
     public Posicion getPosFinal() {
         return posFinal;

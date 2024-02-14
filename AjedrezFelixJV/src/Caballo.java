@@ -4,7 +4,7 @@ public class Caballo extends Pieza{
     }
 
     @Override
-    public boolean validoMovimiento(Movimiento mov) {
+    public boolean validoMovimiento(Movimiento mov, Tablero tablero) {
         return Math.abs(mov.saltoHorizontal())==3&&Math.abs(mov.saltoVertical())==2||Math.abs(mov.saltoVertical())==3&&Math.abs(mov.saltoHorizontal())==2;
     }
 

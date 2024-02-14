@@ -4,8 +4,8 @@ public class Rey extends Pieza{
     }
 
     @Override
-    public boolean validoMovimiento(Movimiento mov) {
-        return mov.esHorizontal()&&Math.abs(mov.saltoHorizontal())==1||mov.esVertical()&&Math.abs(mov.saltoVertical())==1||mov.esDiagonal()&&mov.saltoDiagonal()==1;
+    public boolean validoMovimiento(Movimiento mov, Tablero tablero) {
+        return mov.esHorizontal()&&Math.abs(mov.saltoHorizontal())==1||mov.esVertical()&&Math.abs(mov.saltoVertical())==1||mov.esDiagonal()&&Math.abs(mov.saltoHorizontal())==1;
     }
 
     @Override
