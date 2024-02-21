@@ -5,7 +5,7 @@ public class Juego {
      * Constructor de juego que inicializa el color del turno
      */
     public Juego() {
-        this.turno = false;
+        this.turno = true;
     }
 
     /**
@@ -33,15 +33,11 @@ public class Juego {
         else if (tablero.devolverPieza(filinicial,colinicial).isColor() != turno){
             System.out.println("No es el turno de las piezas " + tablero.devolverPieza(filinicial,colinicial).isColor());
         }
-        else if (tablero.devolverPieza(filfinal, colfinal) != null){
-           if (tablero.devolverPieza(filfinal,colfinal).isColor() == tablero.devolverPieza(filinicial,colinicial).isColor()){
+        else if (tablero.devolverPieza(filfinal, colfinal) != null && (tablero.devolverPieza(filfinal,colfinal).isColor() == tablero.devolverPieza(filinicial,colinicial).isColor()))
                 System.out.println("No te puedes comer una pieza de tu mismo color, amigo.");
-            }
-        }
-        else{//ole ole ya tengo movimiento
+        else//ole ole ya tengo movimiento
             mov = new Movimiento(new Posicion(filinicial,colinicial),new Posicion(filfinal,colfinal));
            // turno = !turno; tiene que hacerse cuando la pieza diga que sí puede hacer el movimiento y se halla movido
-        }
         return mov;
     }
 

@@ -28,7 +28,7 @@ public class Peon extends Pieza {
 
         } else {
             if (mov.esVertical() && mov.saltoVertical() == 1 && !tablero.hayPieza(mov.getPosFinal())
-                    || (mov.esDiagonal() && mov.saltoVertical() == -1 && tablero.hayPieza(mov.getPosFinal()))) {
+                    || (mov.esDiagonal() && mov.saltoVertical() == 1 && tablero.hayPieza(mov.getPosFinal()))) {
                     valido = true;
 
             }

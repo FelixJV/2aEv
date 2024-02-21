@@ -9,7 +9,7 @@ public class Tablero {
         tablero[0][0] = new Torre(false);
         tablero[0][1] = new Caballo(false);
         tablero[0][2] = new Alfil(false);
-        tablero[0][3] = new Reina(false);
+        tablero[0][3] = new Dama(false);
         tablero[0][4] = new Rey(false);
         tablero[0][5] = new Alfil(false);
         tablero[0][6] = new Caballo(false);
@@ -19,10 +19,14 @@ public class Tablero {
         for (int j = 0; j < 8; j++) {
             tablero[1][j] = new Peon(false);
         }
+
+        tablero[2][2] = new Peon(true);
+
+
         tablero[7][0] = new Torre(true);
         tablero[7][1] = new Caballo(true);
         tablero[7][2] = new Alfil(true);
-        tablero[7][3] = new Reina(true);
+        tablero[7][3] = new Dama(true);
         tablero[7][4] = new Rey(true);
         tablero[7][5] = new Alfil(true);
         tablero[7][6] = new Caballo(true);
@@ -134,7 +138,9 @@ public class Tablero {
             }
             return respuesta;
         }
-
+        public boolean compProm(Movimiento mov){
+            return mov.getPosInicial().getClass().getSimpleName()=="Peon" && mov.getPosFinal()==null && (mov.getPosFinal().getFila()==0||mov.getPosFinal().getFila()==7);
+        }
 
         /**
          * Metodo que nos dejará ver la pieza que hay en determinada posicion del tablero

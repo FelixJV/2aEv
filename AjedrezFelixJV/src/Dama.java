@@ -1,5 +1,5 @@
-public class Reina extends Pieza{
-    public Reina(boolean color) {
+public class Dama extends Pieza{
+    public Dama(boolean color) {
         super(color);
     }
 
