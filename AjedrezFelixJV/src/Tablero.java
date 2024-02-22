@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Tablero {
     private Pieza[][] tablero = new Pieza[8][8];
 
@@ -139,7 +141,20 @@ public class Tablero {
             return respuesta;
         }
         public boolean compProm(Movimiento mov){
-            return mov.getPosInicial().getClass().getSimpleName()=="Peon" && mov.getPosFinal()==null && (mov.getPosFinal().getFila()==0||mov.getPosFinal().getFila()==7);
+            return mov.getPosInicial().getClass().getSimpleName().equals("Peon") && mov.getPosFinal()==null && (mov.getPosFinal().getFila()==0||mov.getPosFinal().getFila()==7);
+        }
+        public Pieza Promocion(Movimiento mov){
+            Scanner lectura = new Scanner(System.in);
+            System.out.println("A que pieza te gustaría promocionar el Peón: 1. Reina, 2. Torre, 3. Alfil, 4. Caballo");
+            int op = lectura.nextInt();
+            switch (op){
+                case(1):
+
+                    return tablero[mov.getPosFinal().getFila()][mov.getPosFinal().getColumna()]= new Dama(false);
+                }
+
+
+
         }
 
         /**
@@ -210,4 +225,6 @@ public class Tablero {
         public Pieza[][] getTablero () {
             return tablero;
         }
-    }
+
+}
+
