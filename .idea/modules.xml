@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/AjedrezFelixJV/AjedrezFelixJV.iml" filepath="$PROJECT_DIR$/AjedrezFelixJV/AjedrezFelixJV.iml" />
       <module fileurl="file://$PROJECT_DIR$/EjCuentas/EjCuentas.iml" filepath="$PROJECT_DIR$/EjCuentas/EjCuentas.iml" />
       <module fileurl="file://$PROJECT_DIR$/EjMedicos/EjMedicos.iml" filepath="$PROJECT_DIR$/EjMedicos/EjMedicos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ExamenPractica/ExamenPractica.iml" filepath="$PROJECT_DIR$/ExamenPractica/ExamenPractica.iml" />
     </modules>
   </component>
 </project>

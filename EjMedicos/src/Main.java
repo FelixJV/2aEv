@@ -34,6 +34,27 @@ public class Main {
         GestorMedicos gestorMedicos= new GestorMedicos();
 
         System.out.println(gestorMedicos);
+
+
         //Menú con 5 opciones los métodos del gestorMedicos alta, baja, modi
+
+        int [] numbs = {5,3,8,2,8,7,9,1};
+        for (int i = 0; i < numbs.length; i++) {
+            System.out.print(numbs[i]);
+        }
+        for (int i = 0; i < numbs.length; i++) {
+            for (int j = 0; j < numbs.length-1; j++) {
+                if (numbs[i]<numbs[j]) {
+                    int aux = numbs[i];
+                    numbs[i] = numbs[j];
+                    numbs[j] = aux;
+                }
+            }
+
+        }
+        System.out.println("\n");
+        for (int i = 0; i < numbs.length; i++) {
+            System.out.print(numbs[i]);
+        }
     }
 }

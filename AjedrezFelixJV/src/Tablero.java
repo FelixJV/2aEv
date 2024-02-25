@@ -154,7 +154,7 @@ public class Tablero {
                 }
 
 
-
+            return tablero[mov.getPosFinal().getFila()][mov.getPosFinal().getColumna()]= new Dama(false);
         }
 
         /**
