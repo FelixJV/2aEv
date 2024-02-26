@@ -46,6 +46,6 @@ public class Peon extends Pieza {
     }
 
     public String getMensajePersonalizado() {
-        return "Sólo en horizontal y vertical";
+        return "Solo en vertical excepto para comer";
     }
 }

@@ -18,6 +18,6 @@ public class Alfil extends Pieza{
         }
     }
     public String getMensajePersonalizado() {
-        return "Sólo en horizontal y vertical";
+        return "Sólo en diagonal";
     }
 }

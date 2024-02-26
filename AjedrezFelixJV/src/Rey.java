@@ -17,6 +17,6 @@ public class Rey extends Pieza{
         }
     }
     public String getMensajePersonalizado() {
-        return "Sólo en horizontal y vertical";
+        return "Sólo una casilla";
     }
 }

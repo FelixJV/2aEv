@@ -22,7 +22,7 @@ public class Tablero {
             tablero[1][j] = new Peon(false);
         }
 
-        tablero[2][2] = new Peon(true);
+
 
 
         tablero[7][0] = new Torre(true);

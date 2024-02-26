@@ -11,7 +11,7 @@ public class Main {
         boolean fin = false;
         do {
             do {
-                System.out.print("Turno de " +  (juego.getTurno()?"negras":"blancas") + ", movimiento nuevo: ");
+                System.out.print("Turno de " +  (juego.getTurno()?"blancas":"negras") + ", movimiento nuevo: ");
                 String movimiento = lectura.nextLine();
                 mov = juego.jugada(movimiento, tablero);
             } while (mov == null);
