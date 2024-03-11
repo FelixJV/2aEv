@@ -4,10 +4,12 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/2aEv.iml" filepath="$PROJECT_DIR$/.idea/2aEv.iml" />
       <module fileurl="file://$PROJECT_DIR$/AjedrezFelixJV/AjedrezFelixJV.iml" filepath="$PROJECT_DIR$/AjedrezFelixJV/AjedrezFelixJV.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Banco2/Banco2.iml" filepath="$PROJECT_DIR$/Banco2/Banco2.iml" />
       <module fileurl="file://$PROJECT_DIR$/EjCuentas/EjCuentas.iml" filepath="$PROJECT_DIR$/EjCuentas/EjCuentas.iml" />
       <module fileurl="file://$PROJECT_DIR$/EjMedicos/EjMedicos.iml" filepath="$PROJECT_DIR$/EjMedicos/EjMedicos.iml" />
       <module fileurl="file://$PROJECT_DIR$/ExamenPractica/ExamenPractica.iml" filepath="$PROJECT_DIR$/ExamenPractica/ExamenPractica.iml" />
       <module fileurl="file://$PROJECT_DIR$/Oca/Oca.iml" filepath="$PROJECT_DIR$/Oca/Oca.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Parkes/Parkes.iml" filepath="$PROJECT_DIR$/Parkes/Parkes.iml" />
     </modules>
   </component>
 </project>

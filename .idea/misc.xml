@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FindBugsConfigurable">
     <option name="make" value="true" />
     <option name="effort" value="default" />
@@ -8,6 +9,24 @@
   </component>
   <component name="JavadocGenerationManager">
     <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../Javadoc ajedrez FelixJV" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/JuegoEqsam/pom.xml" />
+        <option value="$PROJECT_DIR$/JuegoEksam/pom.xml" />
+        <option value="$PROJECT_DIR$/JuegoEksams/pom.xml" />
+        <option value="$PROJECT_DIR$/JuegoExsam/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/JuegoEksam/pom.xml" />
+        <option value="$PROJECT_DIR$/JuegoEksams/pom.xml" />
+        <option value="$PROJECT_DIR$/JuegoEqsam/pom.xml" />
+      </set>
+    </option>
+    <option name="workspaceImportForciblyTurnedOn" value="true" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="openjdk-21" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
